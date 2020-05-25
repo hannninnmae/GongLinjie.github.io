@@ -8,21 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.首先准备好javacore和heapdump文件以及两个jar包(ibm官网可下载)2.对应目录下cmd窗口运行以下命令 1java -Xmx500M -jar jcaxxx.jar javacore.XXXXXXXXXXX  3.查看javacore主界面信息可以看到当时的活动线程数和总线程数，当时的已用堆内存大小和可分配堆内存大小4.在上图对应位置右击,选择Thread Detail可以看">
+  <meta name="description" content="1.首先准备好javacore和heapdump文件和两个jar包(ibm官网可下载)2.对应目录下cmd窗口运行以下命令&#96;&#96;&#96;javajava -Xmx500M -jar jcaxxx.jar javacore文件名 1234567&amp;#123;% asset_img 2.png %&amp;#125;3.查看javacore主界面信息&amp;#123;% asset_img 3.png %&amp;#125;可以看到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1">
 <meta property="og:url" content="http://yoursite.com/2020/05/24/1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.首先准备好javacore和heapdump文件以及两个jar包(ibm官网可下载)2.对应目录下cmd窗口运行以下命令 1java -Xmx500M -jar jcaxxx.jar javacore.XXXXXXXXXXX  3.查看javacore主界面信息可以看到当时的活动线程数和总线程数，当时的已用堆内存大小和可分配堆内存大小4.在上图对应位置右击,选择Thread Detail可以看">
+<meta property="og:description" content="1.首先准备好javacore和heapdump文件和两个jar包(ibm官网可下载)2.对应目录下cmd窗口运行以下命令&#96;&#96;&#96;javajava -Xmx500M -jar jcaxxx.jar javacore文件名 1234567&amp;#123;% asset_img 2.png %&amp;#125;3.查看javacore主界面信息&amp;#123;% asset_img 3.png %&amp;#125;可以看到">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2020/05/24/1/1.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/24/1/2.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/24/1/3.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/24/1/4.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/24/1/:title/5.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/24/1/6.png">
 <meta property="og:image" content="http://yoursite.com/2020/05/24/1/7.png">
 <meta property="article:published_time" content="2020-05-24T11:13:17.000Z">
-<meta property="article:modified_time" content="2020-05-25T07:44:45.990Z">
+<meta property="article:modified_time" content="2020-05-25T07:59:53.452Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/05/24/1/1.png">
@@ -181,10 +178,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.首先准备好javacore和heapdump文件以及两个jar包(ibm官网可下载)<img src="/2020/05/24/1/1.png" class=""><br>2.对应目录下cmd窗口运行以下命令</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx500M -jar jcaxxx.jar javacore.XXXXXXXXXXX</span><br></pre></td></tr></table></figure>
-<img src="/2020/05/24/1/2.png" class="">
-<p>3.查看javacore主界面信息<img src="/2020/05/24/1/3.png" class=""><br>可以看到当时的活动线程数和总线程数，当时的已用堆内存大小和可分配堆内存大小<br>4.在上图对应位置右击,选择Thread Detail<img src="/2020/05/24/1/4.png" class="">可以看到当时所有线程总览，以及某个线程状态和栈深度<br>5.gd<br><img src=":title/5.png" alt=""><br>6.dfg<br>我现在写了一个段落，并且想在这个段落的某一个地方引入一张图片<br>7.dfg<br>我现在写了一个段落，并且想在这个段落的某一个地方<img src="/2020/05/24/1/7.png" class="" title="这是一个新的博客的图片的说明">引入一张图片</p>
+        <p>1.首先准备好javacore和heapdump文件和两个jar包(ibm官网可下载)<img src="/2020/05/24/1/1.png" class=""><br>2.对应目录下cmd窗口运行以下命令```java<br>java -Xmx500M -jar jcaxxx.jar javacore文件名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 2.png %&#125;</span><br><span class="line">3.查看javacore主界面信息&#123;% asset_img 3.png %&#125;</span><br><span class="line">可以看到当时的活动线程数和总线程数，当时的已用堆内存大小和可分配堆内存大小</span><br><span class="line">4.在上图对应位置右击,选择Thread Detail&#123;% asset_img 4.png %&#125;可以看到当时所有线程总览，以及某个线程状态和栈深度</span><br><span class="line">5.点击线程,查看具体调用链，找到问题，修改代码&#123;% asset_img 5.png %&#125;</span><br><span class="line">6.对应目录下cmd窗口运行以下命令&#96;&#96;&#96;java</span><br><span class="line">java -Xmx500M -jar haxxx.jar heapdump文件名</span><br></pre></td></tr></table></figure>
+<img src="/2020/05/24/1/6.png" class="">
+<p>7.查看heapdump主界面信息,分析是否可能存在内存泄漏的情况<br>可以看到当时堆中具体哪个对象数量最多<img src="/2020/05/24/1/7.png" class="">效果类似于jmap -histo:live pid| head -20</p>
+<p>PS:<br>如果was服务器性能不好,或者偶尔会WebContainer告警，可以尝试修改<font color=red>中间件服务器&gt;server1&gt;线程池</font>下的ORB.thread.pool和WebContainer参数</p>
 
       
 
