@@ -384,8 +384,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基于jdk8,</p>
-<h5 id="1-ThreadLocal为什么使用弱引用"><a href="#1-ThreadLocal为什么使用弱引用" class="headerlink" title="1.ThreadLocal为什么使用弱引用"></a>1.ThreadLocal为什么使用弱引用</h5><p>Thread指向ThreadLocal,ThreadLocalMap以ThreadLocal为键，弱引用指向ThreadLocal，当ThreadLocal为null时，由于只存在弱引用指向ThreadLocal，所以ThreadLocal对象会被直接回收，如果map以强引用指向ThreadLocal就会存在内存泄漏</p>
+        <p>首次接触threadlocal是在数据库连接池,保证每个线程都获取自己的数据库连接,同时和线程进行绑定,一个为键一个为值存入map<br>同时spring的transactional注解也是通过threadlocal来保证注解内所有方法的connection是同一个,来实现事务一致性<br>基于jdk1.8,记录一下threadlocal使用弱引用的原因和为什么存在内存泄漏</p>
         
       
 
@@ -455,7 +454,7 @@
     	<div class="footer-left">
     		&copy; 2020 Gong Linjie
         
-# <span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+<span id="busuanzi_container_site_pv">    本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 
 <span id="busuanzi_container_site_uv">  本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
     	</div>
