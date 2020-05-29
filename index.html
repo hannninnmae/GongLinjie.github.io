@@ -306,7 +306,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1-首先准备好javacore和heapdump文件和两个jar包-ha相关jar包自行下载"><a href="#1-首先准备好javacore和heapdump文件和两个jar包-ha相关jar包自行下载" class="headerlink" title="1.首先准备好javacore和heapdump文件和两个jar包(ha相关jar包自行下载)"></a>1.首先准备好<a href="ftp://public.dhe.ibm.com/software/websphere/appserv/support/tools/jca/jca466.jar">javacore</a>和heapdump文件和两个jar包(ha相关jar包自行下载)<img src="/2020/05/08/3.javacore%E5%92%8Cheapdump%E8%A7%A3%E6%9E%90%20%E5%9F%BA%E4%BA%8Ewas%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%9F%E6%88%90/1.png" class=""></h5>
+        <h5 id="1-首先准备好javacore和heapdump文件和两个jar包-ha相关jar包自行下载"><a href="#1-首先准备好javacore和heapdump文件和两个jar包-ha相关jar包自行下载" class="headerlink" title="1.首先准备好javacore和heapdump文件和两个jar包(ha相关jar包自行下载)"></a>1.首先准备好<a href="ftp://public.dhe.ibm.com/software/websphere/appserv/support/tools/jca/jca466.jar">javacore</a>和heapdump文件和两个jar包(ha相关jar包自行下载)</h5><p>jca466.jar也可以分析<code>jstack pid > filename</code>生成的线程锁信息dump文件，可用于死锁定位等</p>
+<img src="/2020/05/08/3.javacore%E5%92%8Cheapdump%E8%A7%A3%E6%9E%90%20%E5%9F%BA%E4%BA%8Ewas%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%9F%E6%88%90/1.png" class="">
         
       
 
@@ -384,7 +385,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首次接触threadlocal是在数据库连接池，保证每个线程都获取自己的数据库连接，同时和线程进行绑定，一个为键一个为值存入map。同时spring的@transactional也是通过threadlocal来保证注解内所有方法的connection是同一个，来实现事务一致性。<br>本篇基于jdk1.8，记录一下threadlocaln内部<font color=red>使用弱引用的原因</font>和<font color=red>为什么存在内存泄漏</font></p>
+        <p>1.首次接触threadlocal是在数据库连接池，保证每个线程都获取自己的数据库连接，同时和线程进行绑定，一个为键一个为值存入map。<br>2.spring的@transactional也是通过threadlocal来实现注解下所有方法是同一个connection，来实现事务一致性。<br>本篇基于jdk1.8，记录一下threadlocaln内部<font color=red>为什么使用弱引用</font>和<font color=red>为什么存在内存泄漏</font></p>
         
       
 
