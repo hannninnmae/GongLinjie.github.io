@@ -384,7 +384,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首次接触threadlocal是在数据库连接池,保证每个线程都获取自己的数据库连接,同时和线程进行绑定,一个为键一个为值存入map<br>同时spring的transactional注解也是通过threadlocal来保证注解内所有方法的connection是同一个,来实现事务一致性<br>基于jdk1.8,记录一下threadlocal使用弱引用的原因和为什么存在内存泄漏</p>
+        <p>首次接触threadlocal是在数据库连接池,保证每个线程都获取自己的数据库连接,同时和线程进行绑定,一个为键一个为值存入map<br>同时spring的transactional注解也是通过threadlocal来保证注解内所有方法的connection是同一个,来实现事务一致性<br>基于jdk1.8,记录一下threadlocaln内部<font color=red>使用弱引用的原因</font>和<font color=red>为什么存在内存泄漏</font></p>
         
       
 
